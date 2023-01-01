@@ -10,7 +10,10 @@ class Question(models.Model):
     #     return self.subject + " " + self.content + " " + self.create_date.strftime("%Y-%m-%d %H:%M:%S")
     # from django.utils import timezone, dateformat
     # dateformat.format(timezone.now(), 'Y-m-d h:m:s')
-
+    # 1. %-formatting
+    # 2. str.format() example: {[field_name]![repr(),str(),asc()]}   ==> {0!s}, {name!r} {!a}
+    # 3. str.Template()
+    # 4. f-string
     def __repr__(self):
         return (
                 self.__class__.__qualname__ + f"(subject={self.subject!r}, content={self.content!r}, "
